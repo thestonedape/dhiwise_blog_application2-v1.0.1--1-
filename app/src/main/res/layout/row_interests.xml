@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable name="interestsRowModel" type="com.nishantsapplication.app.modules.interests.data.model.InterestsRowModel"/>
+    </data>
+    <LinearLayout android:id="@+id/linearIntrestrow"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent" android:orientation="horizontal">
+        <TextView android:ellipsize="end" android:id="@+id/txtArt"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:lineSpacingExtra="@dimen/_1pxh"
+            android:paddingBottom="@dimen/_12pxv"
+            android:paddingStart="@dimen/_16pxh"
+            android:paddingTop="@dimen/_13pxv" android:singleLine="true"
+            android:text="@{interestsRowModel.txtArt}"
+            style="@style/txtSolidRoundedOutline" tools:text="@string/lbl_art"/>
+        <TextView android:ellipsize="end"
+            android:id="@+id/txtCryptocurrency"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:lineSpacingExtra="@dimen/_1pxh"
+            android:paddingBottom="@dimen/_10pxv"
+            android:paddingStart="@dimen/_13pxh"
+            android:paddingTop="@dimen/_15pxv" android:singleLine="true"
+            android:text="@{interestsRowModel.txtCryptocurrency}"
+            style="@style/txtSolidRoundedOutline" tools:text="@string/lbl_cryptocurrency"/>
+        <TextView android:ellipsize="end" android:id="@+id/txtScience"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:lineSpacingExtra="@dimen/_1pxh"
+            android:paddingBottom="@dimen/_13pxv"
+            android:paddingStart="@dimen/_15pxh"
+            android:paddingTop="@dimen/_12pxv" android:singleLine="true"
+            android:text="@{interestsRowModel.txtScience}"
+            style="@style/txtSolidRoundedOutline" tools:text="@string/lbl_science"/>
+    </LinearLayout>
+</layout>

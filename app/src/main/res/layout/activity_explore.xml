@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable name="exploreVM" type="com.nishantsapplication.app.modules.explore.data.viewmodel.ExploreVM"/>
+    </data>
+    <LinearLayout android:id="@+id/linearExplore"
+        android:layout_height="match_parent"
+        android:layout_width="match_parent"
+        android:orientation="vertical" style="@style/groupStylewhite_A700">
+        <LinearLayout android:gravity="start"
+            android:id="@+id/linearColumnmenu"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent" android:orientation="vertical">
+            <androidx.appcompat.widget.Toolbar
+                android:id="@+id/toolbarAppbar"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent" app:contentInsetStart="0dp">
+                <LinearLayout android:id="@+id/linearRow"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent" android:orientation="horizontal">
+                    <LinearLayout android:id="@+id/linearRowmenu"
+                        android:layout_height="wrap_content"
+                        android:layout_width="wrap_content" android:orientation="horizontal">
+                        <ImageView android:id="@+id/imageMenu"
+                            android:layout_height="@dimen/_20pxh"
+                            android:layout_width="@dimen/_19pxh"
+                            android:scaleType="fitXY"
+                            android:src="@drawable/img_menu"
+                            tools:ignore="ContentDescription" tools:src="@drawable/img_menu"/>
+                        <TextView android:ellipsize="end"
+                            android:id="@+id/txtCategory"
+                            android:layout_height="wrap_content"
+                            android:layout_width="match_parent"
+                            android:singleLine="true"
+                            android:text="@{exploreVM.exploreModel.txtCategory}"
+                            style="@style/txtPoppinssemibold24" tools:text="@string/lbl_explore"/>
+                    </LinearLayout>
+                    <LinearLayout
+                        android:id="@+id/linearRownotification"
+                        android:layout_height="wrap_content"
+                        android:layout_width="wrap_content" android:orientation="horizontal">
+                        <ImageView android:id="@+id/imageNotification"
+                            android:layout_height="@dimen/_21pxh"
+                            android:layout_width="@dimen/_20pxh"
+                            android:scaleType="fitXY"
+                            android:src="@drawable/img_notification"
+                            tools:ignore="ContentDescription" tools:src="@drawable/img_notification"/>
+                        <ImageView android:id="@+id/imageSearch"
+                            android:layout_height="@dimen/_20pxh"
+                            android:layout_width="@dimen/_20pxh"
+                            android:scaleType="fitXY"
+                            android:src="@drawable/img_search"
+                            tools:ignore="ContentDescription" tools:src="@drawable/img_search"/>
+                    </LinearLayout>
+                </LinearLayout>
+            </androidx.appcompat.widget.Toolbar>
+            <androidx.appcompat.widget.SearchView
+                android:background="@drawable/rectangle_bg_black_900_63_radius_10"
+                android:id="@+id/searchViewSerachbox"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:theme="@style/searchViewSerachbox"
+                app:iconifiedByDefault="false"
+                app:queryBackground="@android:color/transparent"
+                app:queryHint="@string/lbl_search" app:searchIcon="@drawable/img_search"/>
+            <LinearLayout android:id="@+id/linearTopics"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:orientation="horizontal" style="@style/groupStylecornerRadius_1">
+                <androidx.appcompat.widget.AppCompatButton
+                    android:background="@drawable/rectangle_bg_black_900_5e_radius_20"
+                    android:ellipsize="end"
+                    android:fontFamily="@font/poppins"
+                    android:gravity="center"
+                    android:id="@+id/btnScience"
+                    android:layout_height="@dimen/_40pxv"
+                    android:layout_width="@dimen/_83pxh"
+                    android:lineSpacingExtra="@dimen/_1pxh"
+                    android:paddingBottom="@dimen/_13pxv"
+                    android:paddingEnd="@dimen/_14pxh"
+                    android:paddingStart="@dimen/_15pxh"
+                    android:paddingTop="@dimen/_13pxv"
+                    android:singleLine="true"
+                    android:text="@string/lbl_science"
+                    android:textAllCaps="false"
+                    android:textColor="@color/black_900"
+                    android:textFontWeight="400"
+                    android:textSize="@dimen/_14pxh"
+                    android:textStyle="normal" tools:text="@string/lbl_science"/>
+                <HorizontalScrollView android:fillViewport="true"
+                    android:id="@+id/horizontalScrollHorizontalscrollloremipsum"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent" android:scrollbars="none">
+                    <LinearLayout android:id="@+id/linearLoremIpsum"
+                        android:layout_height="wrap_content"
+                        android:layout_width="wrap_content"
+                        android:orientation="horizontal" style="@style/groupStyleblack_900_5ecornerRadius">
+                        <TextView android:ellipsize="end"
+                            android:id="@+id/txtLoremIpsum"
+                            android:layout_height="wrap_content"
+                            android:layout_width="match_parent"
+                            android:lineSpacingExtra="@dimen/_1pxh"
+                            android:singleLine="true"
+                            android:text="@{exploreVM.exploreModel.txtLoremIpsum}"
+                            style="@style/txtPoppinsregular14" tools:text="@string/lbl_lorem_ipsum"/>
+                        <TextView android:ellipsize="end"
+                            android:id="@+id/txtTechnology"
+                            android:layout_height="wrap_content"
+                            android:layout_width="match_parent"
+                            android:lineSpacingExtra="@dimen/_1pxh"
+                            android:singleLine="true"
+                            android:text="@{exploreVM.exploreModel.txtTechnology}"
+                            style="@style/txtPoppinsregular14" tools:text="@string/lbl_technology"/>
+                    </LinearLayout>
+                </HorizontalScrollView>
+                <androidx.appcompat.widget.AppCompatButton
+                    android:background="@drawable/rectangle_bg_black_900_5e_radius_20"
+                    android:ellipsize="end"
+                    android:fontFamily="@font/poppins"
+                    android:gravity="center" android:id="@+id/btnDesign"
+                    android:layout_height="@dimen/_40pxv"
+                    android:layout_width="@dimen/_83pxh"
+                    android:lineSpacingExtra="@dimen/_1pxh"
+                    android:paddingBottom="@dimen/_11pxv"
+                    android:paddingEnd="@dimen/_18pxh"
+                    android:paddingStart="@dimen/_18pxh"
+                    android:paddingTop="@dimen/_11pxv"
+                    android:singleLine="true"
+                    android:text="@string/lbl_design"
+                    android:textAllCaps="false"
+                    android:textColor="@color/black_900"
+                    android:textFontWeight="400"
+                    android:textSize="@dimen/_14pxh"
+                    android:textStyle="normal" tools:text="@string/lbl_design"/>
+                <LinearLayout android:gravity="center_horizontal"
+                    android:id="@+id/linearTechnology"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:orientation="vertical" style="@style/groupStylecornerRadius_3">
+                    <ImageView android:id="@+id/imageBackground"
+                        android:layout_gravity="start"
+                        android:layout_height="@dimen/_40pxh"
+                        android:layout_width="@dimen/_20pxh"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/img_background_40X20"
+                        tools:ignore="ContentDescription" tools:src="@drawable/img_background_40X20"/>
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+        <View android:background="@color/gray_400_87"
+            android:id="@+id/lineDividerline"
+            android:layout_gravity="start"
+            android:layout_height="@dimen/_1pxv" android:layout_width="@dimen/_375pxh"/>
+        <TextView android:ellipsize="end"
+            android:id="@+id/txtLoremipsumis"
+            android:layout_gravity="start"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:lineSpacingExtra="@dimen/_1pxh"
+            android:singleLine="true"
+            android:text="@{exploreVM.exploreModel.txtLoremipsumis}"
+            style="@style/txtPoppinssemibold14" tools:text="@string/msg_recommended_for"/>
+        <androidx.recyclerview.widget.RecyclerView
+            android:gravity="center_horizontal"
+            android:id="@+id/recyclerExplore"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:orientation="vertical"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            itemSpace="@{@dimen/_48pxh}" tools:itemCount="3" tools:listitem="@layout/row_explore"/>
+        <View android:background="@color/gray_400_87"
+            android:id="@+id/lineDividerlineOne"
+            android:layout_gravity="center_horizontal"
+            android:layout_height="@dimen/_1pxv" android:layout_width="@dimen/_335pxh"/>
+    </LinearLayout>
+</layout>

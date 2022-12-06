@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable name="signUpVM" type="com.nishantsapplication.app.modules.signup.data.viewmodel.SignUpVM"/>
+    </data>
+    <LinearLayout android:gravity="center_horizontal"
+        android:id="@+id/linearSignup"
+        android:layout_height="match_parent"
+        android:layout_width="match_parent"
+        android:orientation="vertical" style="@style/groupStylewhite_A700">
+        <ImageView android:id="@+id/imageDhiWiseblackm"
+            android:layout_gravity="center_horizontal"
+            android:layout_height="@dimen/_59pxh"
+            android:layout_width="@dimen/_59pxh"
+            android:scaleType="fitXY"
+            imageRes="@{@drawable/img_dhiwiseblackm}"
+            tools:ignore="ContentDescription" tools:src="@drawable/img_dhiwiseblackm"/>
+        <LinearLayout android:gravity="start"
+            android:id="@+id/linearColumntitletext"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content" android:orientation="vertical">
+            <TextView android:ellipsize="end"
+                android:gravity="center_horizontal"
+                android:id="@+id/txtTitletext"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:lineSpacingExtra="@dimen/_1pxh"
+                android:singleLine="true"
+                android:text="@{signUpVM.signUpModel.txtTitletext}"
+                style="@style/txtPlantagenetCherokee32" tools:text="@string/lbl_register_now"/>
+            <LinearLayout android:gravity="start"
+                android:id="@+id/linearRowgoogleone"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:orientation="horizontal" style="@style/groupStylecornerRadius">
+                <ImageView android:id="@+id/imageGoogleOne"
+                    android:layout_height="@dimen/_21pxh"
+                    android:layout_width="@dimen/_21pxh"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/img_google1"
+                    tools:ignore="ContentDescription" tools:src="@drawable/img_google1"/>
+                <TextView android:ellipsize="end"
+                    android:id="@+id/txtSignupwithGo"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:singleLine="true"
+                    android:text="@{signUpVM.signUpModel.txtSignupwithGo}"
+                    style="@style/txtPoppinsregular14" tools:text="@string/msg_sign_up_with_go"/>
+            </LinearLayout>
+            <LinearLayout android:gravity="start"
+                android:id="@+id/linearRowfacebookone"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:orientation="horizontal" style="@style/groupStylecornerRadius">
+                <ImageView android:id="@+id/imageFacebookOne"
+                    android:layout_height="@dimen/_20pxh"
+                    android:layout_width="@dimen/_20pxh"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/img_facebook1"
+                    tools:ignore="ContentDescription" tools:src="@drawable/img_facebook1"/>
+                <TextView android:ellipsize="end"
+                    android:id="@+id/txtSignupwithFa"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:singleLine="true"
+                    android:text="@{signUpVM.signUpModel.txtSignupwithFa}"
+                    style="@style/txtPoppinsregular14" tools:text="@string/msg_sign_up_with_fa"/>
+            </LinearLayout>
+            <LinearLayout android:gravity="start"
+                android:id="@+id/linearRowtwitterone"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:orientation="horizontal" style="@style/groupStylecornerRadius">
+                <ImageView android:id="@+id/imageTwitterOne"
+                    android:layout_height="@dimen/_19pxh"
+                    android:layout_width="@dimen/_19pxh"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/img_twitter1"
+                    tools:ignore="ContentDescription" tools:src="@drawable/img_twitter1"/>
+                <TextView android:ellipsize="end"
+                    android:id="@+id/txtSignupwithTw"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:singleLine="true"
+                    android:text="@{signUpVM.signUpModel.txtSignupwithTw}"
+                    style="@style/txtPoppinsregular14" tools:text="@string/msg_sign_up_with_tw"/>
+            </LinearLayout>
+            <LinearLayout android:gravity="start"
+                android:id="@+id/linearRowappleblacklog"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:orientation="horizontal" style="@style/groupStylecornerRadius">
+                <ImageView android:id="@+id/imageAppleblacklog"
+                    android:layout_height="@dimen/_20pxh"
+                    android:layout_width="@dimen/_20pxh"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/img_appleblacklog"
+                    tools:ignore="ContentDescription" tools:src="@drawable/img_appleblacklog"/>
+                <TextView android:ellipsize="end"
+                    android:id="@+id/txtSignupwithAp"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:singleLine="true"
+                    android:text="@{signUpVM.signUpModel.txtSignupwithAp}"
+                    style="@style/txtPoppinsregular14" tools:text="@string/msg_sign_up_with_ap"/>
+            </LinearLayout>
+            <LinearLayout android:gravity="start"
+                android:id="@+id/linearRowconfirmation"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content" android:orientation="horizontal">
+                <TextView android:ellipsize="end"
+                    android:id="@+id/txtConfirmation"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:singleLine="true"
+                    android:text="@{signUpVM.signUpModel.txtConfirmation}"
+                    style="@style/txtPoppinsregular14" tools:text="@string/msg_already_have_an"/>
+                <TextView android:ellipsize="end"
+                    android:id="@+id/txtSignin"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:singleLine="true"
+                    android:text="@{signUpVM.signUpModel.txtSignin}"
+                    style="@style/txtPoppinsregular14_1" tools:text="@string/lbl_sign_in"/>
+            </LinearLayout>
+            <TextView android:gravity="center_horizontal"
+                android:id="@+id/txtDescription"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:text="@{signUpVM.signUpModel.txtDescription}"
+                style="@style/txtPoppinsregular12" tools:text="@string/msg_by_signing_up"/>
+        </LinearLayout>
+    </LinearLayout>
+</layout>

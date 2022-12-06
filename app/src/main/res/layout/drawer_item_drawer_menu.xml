@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable name="drawerItemDrawerMenuModel" type="com.nishantsapplication.app.modules.itemdrawermenu.data.model.DrawerItemDrawerMenuModel"/>
+    </data>
+    <LinearLayout android:gravity="center_horizontal"
+        android:id="@+id/linearColumnOne"
+        android:layout_height="match_parent"
+        android:layout_width="match_parent" android:orientation="vertical">
+        <LinearLayout android:gravity="center_horizontal"
+            android:id="@+id/linearColumn"
+            android:layout_height="match_parent"
+            android:layout_width="match_parent"
+            android:orientation="vertical" style="@style/groupStyleblack_900_99">
+            <LinearLayout android:gravity="start"
+                android:id="@+id/linearColumnprofilepicture"
+                android:layout_height="match_parent"
+                android:layout_width="match_parent"
+                android:orientation="vertical" style="@style/groupStylewhite_A700">
+                <LinearLayout android:gravity="start"
+                    android:id="@+id/linearRowprofilepicture"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content" android:orientation="horizontal">
+                    <ImageView android:id="@+id/imageProfilePicture"
+                        android:layout_height="@dimen/_62pxh"
+                        android:layout_width="@dimen/_59pxh"
+                        android:scaleType="fitXY"
+                        imageRes="@{@drawable/img_profilepicture}"
+                        tools:ignore="ContentDescription" tools:src="@drawable/img_profilepicture"/>
+                    <LinearLayout android:gravity="start"
+                        android:id="@+id/linearColumnviewprofile"
+                        android:layout_height="wrap_content"
+                        android:layout_width="wrap_content" android:orientation="vertical">
+                        <TextView android:ellipsize="end"
+                            android:id="@+id/txtViewProfile"
+                            android:layout_height="wrap_content"
+                            android:layout_width="match_parent"
+                            android:lineSpacingExtra="@dimen/_1pxh"
+                            android:singleLine="true"
+                            android:text="@{drawerItemDrawerMenuModel.txtViewProfile}"
+                            style="@style/txtPoppinsregular14_3" tools:text="@string/lbl_welcome"/>
+                        <TextView android:ellipsize="end"
+                            android:id="@+id/txtJohnDoe"
+                            android:layout_height="wrap_content"
+                            android:layout_width="match_parent"
+                            android:lineSpacingExtra="@dimen/_1pxh"
+                            android:singleLine="true"
+                            android:text="@{drawerItemDrawerMenuModel.txtJohnDoe}"
+                            style="@style/txtPoppinsmedium18" tools:text="@string/lbl_john_doe"/>
+                    </LinearLayout>
+                </LinearLayout>
+                <View android:background="@color/black_900_67"
+                    android:id="@+id/lineLineFive"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_height="@dimen/_1pxv" android:layout_width="@dimen/_232pxh"/>
+                <TextView android:ellipsize="end"
+                    android:id="@+id/txtHome"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:lineSpacingExtra="@dimen/_1pxh"
+                    android:singleLine="true"
+                    android:text="@{drawerItemDrawerMenuModel.txtHome}"
+                    style="@style/txtPoppinsmedium18" tools:text="@string/lbl_home"/>
+                <TextView android:ellipsize="end"
+                    android:id="@+id/txtAudio"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:lineSpacingExtra="@dimen/_1pxh"
+                    android:singleLine="true"
+                    android:text="@{drawerItemDrawerMenuModel.txtAudio}"
+                    style="@style/txtPoppinsmedium18" tools:text="@string/lbl_explore"/>
+                <TextView android:ellipsize="end"
+                    android:id="@+id/txtReadingList"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:lineSpacingExtra="@dimen/_1pxh"
+                    android:singleLine="true"
+                    android:text="@{drawerItemDrawerMenuModel.txtReadingList}"
+                    style="@style/txtPoppinsmedium18" tools:text="@string/lbl_interests"/>
+                <TextView android:ellipsize="end"
+                    android:id="@+id/txtTermAndCondition"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:lineSpacingExtra="@dimen/_1pxh"
+                    android:singleLine="true"
+                    android:text="@{drawerItemDrawerMenuModel.txtTermAndCondition}"
+                    style="@style/txtPoppinsmedium18" tools:text="@string/msg_terms_and_condi2"/>
+                <TextView android:ellipsize="end"
+                    android:id="@+id/txtNewStory"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:lineSpacingExtra="@dimen/_1pxh"
+                    android:singleLine="true"
+                    android:text="@{drawerItemDrawerMenuModel.txtNewStory}"
+                    style="@style/txtPoppinsmedium18" tools:text="@string/lbl_privacy_policy"/>
+                <View android:background="@color/black_900_67"
+                    android:id="@+id/lineLineSix"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_height="@dimen/_1pxv" android:layout_width="@dimen/_232pxh"/>
+                <TextView android:ellipsize="end"
+                    android:id="@+id/txtLogout"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:lineSpacingExtra="@dimen/_1pxh"
+                    android:singleLine="true"
+                    android:text="@{drawerItemDrawerMenuModel.txtLogout}"
+                    style="@style/txtPoppinsmedium18_1" tools:text="@string/lbl_logout"/>
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+</layout>

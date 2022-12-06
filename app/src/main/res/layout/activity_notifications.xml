@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable name="notificationsVM" type="com.nishantsapplication.app.modules.notifications.data.viewmodel.NotificationsVM"/>
+    </data>
+    <LinearLayout android:gravity="start"
+        android:id="@+id/linearNotifications"
+        android:layout_height="match_parent"
+        android:layout_width="match_parent"
+        android:orientation="vertical" style="@style/groupStylewhite_A700">
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbarAppbar"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent" app:contentInsetStart="0dp">
+            <LinearLayout android:gravity="start"
+                android:id="@+id/linearRowarrowleft"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:orientation="horizontal" style="@style/groupStylewhite_1">
+                <ImageView android:id="@+id/imageArrowleft"
+                    android:layout_height="@dimen/_12pxh"
+                    android:layout_width="@dimen/_6pxh"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/img_arrowleft_black_900"
+                    tools:ignore="ContentDescription" tools:src="@drawable/img_arrowleft_black_900"/>
+                <TextView android:ellipsize="end"
+                    android:id="@+id/txtActivity"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:singleLine="true"
+                    android:text="@{notificationsVM.notificationsModel.txtActivity}"
+                    style="@style/txtPoppinsregular18" tools:text="@string/lbl_activity"/>
+            </LinearLayout>
+        </androidx.appcompat.widget.Toolbar>
+        <LinearLayout android:gravity="start"
+            android:id="@+id/linearRowunsplash93bshr"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent" android:orientation="horizontal">
+            <ImageView android:id="@+id/imageUnsplash93BsHR"
+                android:layout_height="@dimen/_52pxh"
+                android:layout_width="@dimen/_52pxh"
+                android:scaleType="centerCrop" circular="@{true}"
+                imageRes="@{@drawable/img_unsplash93bshr}"
+                tools:ignore="ContentDescription" tools:src="@drawable/img_unsplash93bshr"/>
+            <TextView android:id="@+id/txtDescription"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_width="match_parent"
+                android:text="@{notificationsVM.notificationsModel.txtDescription}"
+                style="@style/txtPoppinsregular14" tools:text="@string/msg_bezaleel_nwabia"/>
+        </LinearLayout>
+        <View android:background="@color/black_900_63"
+            android:id="@+id/lineLineSeven"
+            android:layout_height="@dimen/_1pxv" android:layout_width="@dimen/_375pxh"/>
+        <LinearLayout android:gravity="start"
+            android:id="@+id/linearRowunsplash3ujvzg"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent" android:orientation="horizontal">
+            <ImageView android:id="@+id/imageUnsplash3ujVzg"
+                android:layout_height="@dimen/_52pxh"
+                android:layout_width="@dimen/_52pxh"
+                android:scaleType="centerCrop" circular="@{true}"
+                imageRes="@{@drawable/img_unsplash3ujvzg}"
+                tools:ignore="ContentDescription" tools:src="@drawable/img_unsplash3ujvzg"/>
+            <TextView android:id="@+id/txtDescriptionOne"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_width="match_parent"
+                android:text="@{notificationsVM.notificationsModel.txtDescriptionOne}"
+                style="@style/txtPoppinsregular14" tools:text="@string/msg_catalunha_mj_re"/>
+        </LinearLayout>
+        <View android:background="@color/black_900_63"
+            android:id="@+id/lineLineSevenOne"
+            android:layout_height="@dimen/_1pxv" android:layout_width="@dimen/_375pxh"/>
+        <LinearLayout android:gravity="start"
+            android:id="@+id/linearRowunsplashannsvl"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent" android:orientation="horizontal">
+            <ImageView android:id="@+id/imageUnsplashANNsvl"
+                android:layout_height="@dimen/_52pxh"
+                android:layout_width="@dimen/_52pxh"
+                android:scaleType="centerCrop" circular="@{true}"
+                imageRes="@{@drawable/img_unsplashannsvl}"
+                tools:ignore="ContentDescription" tools:src="@drawable/img_unsplashannsvl"/>
+            <TextView android:id="@+id/txtTisanthanpanch"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_width="match_parent"
+                android:text="@{notificationsVM.notificationsModel.txtTisanthanpanch}"
+                style="@style/txtPoppinsregular14" tools:text="@string/msg_tisanthan_panch"/>
+        </LinearLayout>
+        <View android:background="@color/black_900_63"
+            android:id="@+id/lineLineSevenTwo"
+            android:layout_height="@dimen/_1pxv" android:layout_width="@dimen/_375pxh"/>
+    </LinearLayout>
+</layout>
